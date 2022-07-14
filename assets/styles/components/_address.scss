@@ -1,0 +1,40 @@
+.address__section {
+    padding: 2em 1em;
+    .address__title {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .address__container {
+        padding: 1em 0;
+        .address__title-container {
+            font-size: 1.3em;
+            color: $yellow-text;
+
+            padding: 0.5em 0;
+            .address__span {
+                color: $white-text;
+                font-size: 0.8em;
+            }
+        }
+        .address__text {
+            font-size: 1em;
+            color: $grey-text;
+        }
+    }
+}
+.address__section-desktop {
+    display: none;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width:1200px) {
+    .address__section {
+        display: none;
+    }
+    .address__section-desktop {
+        display: flex;
+        .address__container-desktop {
+            padding: 1em;
+        }
+    }
+}

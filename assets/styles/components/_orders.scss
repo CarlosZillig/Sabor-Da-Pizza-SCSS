@@ -1,0 +1,67 @@
+.orders__section {
+    padding: 2em;
+    border-bottom: 2px solid $yellow-bg;
+    .orders__title {
+        text-align: center;
+        font-size: 1.5em;
+        padding: 1em 0;
+    }
+    .orders__container {
+        text-align: center;
+        .orders__list {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 1em 0 2em 0;
+            .orders__image {
+                width: 64px;
+                height: 64px;
+            } .orders__title-desktop {
+                display: none;
+            }
+        } .orders__button {
+            padding: 1em 2em;
+            background-color: $yellow-bg;
+            border: none;
+
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width:1200px) {
+    .orders__section {
+        background-color: $dark-green-bg;
+        border: none;
+        padding: 1.5em 0;
+        .orders__title {
+            text-transform: uppercase;
+            padding: 0;
+            font-size: 1.1em;
+        }
+        .orders__container {
+            display: none;
+            justify-content: space-around;
+            align-items: center;
+            .orders__list {
+                justify-content: center;
+                display: block;
+                .orders__item {
+                    padding: 1.5em 1.5em 0 1.5em;
+                    display: inline-block;
+                    .orders__image {
+                        height: 50px;
+                        width: 50px;
+                    }
+                } .orders__title-desktop {
+                    text-transform: uppercase;
+                    display: block;
+                }
+            }
+        }
+    }
+    
+
+}

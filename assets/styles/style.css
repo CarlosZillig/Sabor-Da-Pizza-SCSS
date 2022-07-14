@@ -1,0 +1,313 @@
+/*Import all archives*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&display=swap");
+html {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+.header {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  border-bottom: 1px solid #FAC564;
+  background-color: rgb(214, 213, 210);
+}
+.header .header__image {
+  width: 80px;
+  height: 80px;
+}
+.header .orders__button-desktop, .header .header__container-orders--desktop {
+  display: none;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header .header__logo .header__image {
+    width: 60px;
+    height: 60px;
+  }
+  .header .header__button-desktop .orders__button-desktop {
+    display: block;
+    padding: 1em 2em;
+    background-color: #FAC564;
+    border: none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .header .header__button-desktop .orders__button-desktop:hover {
+    background-color: #f3aa22;
+  }
+  .header .header__container-orders--desktop {
+    display: flex;
+  }
+  .header .header__container-orders--desktop .orders__list-desktop {
+    display: flex;
+  }
+  .header .header__container-orders--desktop .orders__list-desktop .orders__item-desktop .orders__image-desktop {
+    width: 40px;
+    height: 40px;
+    padding: 0 1em;
+  }
+}
+.menu__section {
+  text-align: center;
+}
+.menu__section .menu__title {
+  font-size: 1em;
+  padding: 1em 0;
+  border-bottom: 1px solid #FAC564;
+}
+.menu__section .menu__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.menu__section .menu__container .menu__image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+.menu__section .menu__container .menu__container-title {
+  font-family: "Cormorant SC", serif;
+  font-size: 3em;
+  color: #fff;
+  width: 90%;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .menu__section .menu__title {
+    display: none;
+  }
+  .menu__section .menu__container .menu__image {
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.3;
+  }
+  .menu__section .menu__container .menu__container-title {
+    font-size: 4.2em;
+    font-weight: 700;
+  }
+}
+.about__section {
+  padding: 1em;
+  background-color: rgb(214, 213, 210);
+}
+.about__section .about__container .about__title {
+  font-size: 2em;
+  line-height: 1.3;
+  color: #000;
+}
+.about__section .about__container .about__text {
+  font-size: 1.2em;
+  color: #808080;
+  line-height: 1.5;
+  padding: 2em 0;
+}
+.about__section .about__container .about__button-desktop {
+  display: none;
+}
+.about__section .about__container .about__container-image .about__image {
+  width: 100%;
+  max-width: 800px;
+  max-height: 800px;
+  background-size: cover;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .about__section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .about__section .about__container-desktop {
+    padding-left: 2em;
+  }
+  .about__section .about__container .about__container-image .about__image {
+    width: 30vw;
+  }
+  .about__section .about__container .about__button-desktop {
+    display: block;
+  }
+  .about__section .about__container .about__button-desktop .about__button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 1em 2em;
+    background-color: #121812;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+  }
+  .about__section .about__container .about__button-desktop .about__button:hover {
+    background-color: #f3aa22;
+    color: #121812;
+    font-weight: 700;
+  }
+}
+.orders__section {
+  padding: 2em;
+  border-bottom: 2px solid #FAC564;
+}
+.orders__section .orders__title {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em 0;
+}
+.orders__section .orders__container {
+  text-align: center;
+}
+.orders__section .orders__container .orders__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0 2em 0;
+}
+.orders__section .orders__container .orders__list .orders__image {
+  width: 64px;
+  height: 64px;
+}
+.orders__section .orders__container .orders__list .orders__title-desktop {
+  display: none;
+}
+.orders__section .orders__container .orders__button {
+  padding: 1em 2em;
+  background-color: #FAC564;
+  border: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .orders__section {
+    background-color: #121812;
+    border: none;
+    padding: 1.5em 0;
+  }
+  .orders__section .orders__title {
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  .orders__section .orders__container {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .orders__section .orders__container .orders__list {
+    justify-content: center;
+    display: block;
+  }
+  .orders__section .orders__container .orders__list .orders__item {
+    padding: 1.5em 1.5em 0 1.5em;
+    display: inline-block;
+  }
+  .orders__section .orders__container .orders__list .orders__item .orders__image {
+    height: 50px;
+    width: 50px;
+  }
+  .orders__section .orders__container .orders__list .orders__title-desktop {
+    text-transform: uppercase;
+    display: block;
+  }
+}
+.address__section {
+  padding: 2em 1em;
+}
+.address__section .address__title {
+  font-size: 1.5em;
+  text-align: center;
+}
+.address__section .address__container {
+  padding: 1em 0;
+}
+.address__section .address__container .address__title-container {
+  font-size: 1.3em;
+  color: #FAC564;
+  padding: 0.5em 0;
+}
+.address__section .address__container .address__title-container .address__span {
+  color: #fff;
+  font-size: 0.8em;
+}
+.address__section .address__container .address__text {
+  font-size: 1em;
+  color: #808080;
+}
+
+.address__section-desktop {
+  display: none;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .address__section {
+    display: none;
+  }
+  .address__section-desktop {
+    display: flex;
+  }
+  .address__section-desktop .address__container-desktop {
+    padding: 1em;
+  }
+}
+.footer {
+  padding: 1em;
+  border-top: 1px solid #FAC564;
+}
+.footer .footer__title {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 0 0 1em 0;
+  text-transform: uppercase;
+}
+.footer .footer__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .footer__list .footer__items .footer__image {
+  width: 64px;
+  height: 64px;
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width: 1200px) {
+  .footer {
+    background-color: #121812;
+  }
+  .footer .footer__title {
+    display: none;
+  }
+  .footer .footer__list {
+    justify-content: center;
+  }
+  .footer .footer__list .footer__items {
+    padding: 0 1em;
+  }
+  .footer .footer__list .footer__items .footer__image {
+    width: 50px;
+    height: 50px;
+  }
+  .footer .footer__list .footer__items .footer__image-facebook {
+    width: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */

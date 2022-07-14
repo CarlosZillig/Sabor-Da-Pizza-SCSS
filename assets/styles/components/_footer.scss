@@ -1,0 +1,42 @@
+.footer {
+    padding: 1em;
+    border-top: 1px solid $yellow-bg;
+    .footer__title {
+        font-size: 1.1em;
+        text-align: center;
+        padding: 0 0 1em 0;
+        text-transform: uppercase;
+    }
+    .footer__list {
+        display: flex;
+        justify-content: space-evenly;
+        .footer__items {
+            .footer__image {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width:1200px) {
+    .footer {
+        background-color: $dark-green-bg;
+        .footer__title {
+            display: none;
+        }
+        .footer__list {
+            justify-content: center;
+            .footer__items {
+                padding: 0 1em;
+                .footer__image {
+                    width: 50px;
+                    height: 50px;
+                } .footer__image-facebook {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

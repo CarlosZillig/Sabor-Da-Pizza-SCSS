@@ -1,0 +1,65 @@
+.about__section {
+    padding: 1em;
+    background-color: $white-bg;
+    .about__container {
+        .about__title {
+            font-size: 2em;
+            line-height: 1.3;
+            color: $black-bg;
+        }
+        .about__text {
+            font-size: 1.2em;
+            color: $grey-text;
+            line-height: 1.5;
+    
+            padding: 2em 0;
+        }
+        .about__button-desktop {
+            display: none;
+        }
+        .about__container-image {
+            .about__image {
+                width: 100%;
+                max-width: 800px;
+                max-height: 800px;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+/*O certo seria 1440px, porem meu monitor suporta apenas 1200px*/
+@media screen and (min-width:1200px) {
+    .about__section {
+        display: flex;
+        flex-direction: row-reverse;
+        .about__container-desktop {
+        padding-left: 2em;
+        } .about__container {
+            .about__container-image {
+                .about__image {
+                    width: 30vw;
+                }
+            } .about__button-desktop {
+                display: block;
+                .about__button {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1em;
+                    padding: 1em 2em;
+                    background-color: $dark-green-bg;
+                    color: $white-text;
+                    border: none;
+
+                    transition: .3s;
+                    &:hover{
+                        background-color: $yellow-bg-h;
+                        color: $dark-green-bg;
+
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
